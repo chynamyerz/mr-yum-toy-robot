@@ -7,8 +7,10 @@ import { Place } from "./types";
 
 function App() {
   const [place, setPlace] = useState<Place>();
+  const [showReport, setShowReport] = useState<boolean>(false);
+
   return (
-    <AppContextProvider value={{ place, setPlace }}>
+    <AppContextProvider value={{ place, setPlace, setShowReport }}>
       <Container>
         <Grid container direction="column" alignItems="center">
           <Grid item>
@@ -30,7 +32,7 @@ function App() {
                     <ToyActions />
                   </Grid>
                   <Grid item>
-                    {place && (
+                    {place && showReport && (
                       <Grid container direction="column">
                         <Box
                           marginTop={4}

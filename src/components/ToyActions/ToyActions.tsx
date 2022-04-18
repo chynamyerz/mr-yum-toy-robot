@@ -4,7 +4,7 @@ import { useAppContext } from "../../context";
 import { ToyDirection } from "../../types";
 
 export const ToyActions: FC = () => {
-  const { place, setPlace } = useAppContext();
+  const { place, setPlace, setShowReport } = useAppContext();
 
   /**
    *
@@ -48,6 +48,10 @@ export const ToyActions: FC = () => {
         setPlace && setPlace({ ...place, direction: ToyDirection.EAST });
         break;
     }
+  };
+
+  const handleShowReport = () => {
+    setShowReport && setShowReport(true);
   };
 
   const handleRight = () => {
@@ -118,7 +122,11 @@ export const ToyActions: FC = () => {
       </Grid>
       <Grid item>
         <Box marginTop={2}>
-          <Button variant="contained" style={{ width: 100 }}>
+          <Button
+            variant="contained"
+            style={{ width: 100 }}
+            onClick={handleShowReport}
+          >
             REPORT
           </Button>
         </Box>

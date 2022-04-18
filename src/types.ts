@@ -26,4 +26,5 @@ export interface Place {
 export interface AppContextValue {
   place?: Place;
   setPlace?: Dispatch<SetStateAction<Place | undefined>>;
+  setShowReport?: Dispatch<SetStateAction<boolean>>;
 }
