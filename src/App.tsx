@@ -43,7 +43,7 @@ function App() {
                         >
                           Current position:
                         </Box>
-                        <Box>{`Cordinate: (${place?.x ?? 0}, ${
+                        <Box>{`Coordinate: (${place?.x ?? 0}, ${
                           4 - (place?.y || 0)
                         })`}</Box>
                         <Box>{`Direction: ${place?.direction}`}</Box>

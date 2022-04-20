@@ -12,6 +12,14 @@ export enum ToyDirection {
   WEST = "WEST",
 }
 
+export enum ToyOperations {
+  PLACE = "PLACE",
+  MOVE = "MOVE",
+  LEFT = "LEFT",
+  RIGHT = "RIGHT",
+  REPORT = "REPORT",
+}
+
 /**
  *
  * Interfaces
